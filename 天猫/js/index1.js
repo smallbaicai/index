@@ -1,5 +1,5 @@
 $(function() {
-    $('.containor').on('mouseenter', function() {
+    $('.containor-menu').on('mouseenter', function() {
         $(".nav_right").removeClass('hide');
     }).on('mouseleave', function() {
         $(".nav_right").addClass('hide');

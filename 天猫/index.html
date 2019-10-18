@@ -32,7 +32,16 @@
 </div>
 <!-- 顶部弹出搜索框 -->
 <!-- 头部 -->
-<div class="layui-header"></div>
+<div class="layui-header">
+     <span class="layui-breadcrumb" lay-separator="|">
+                <a href="">仿真花</a>
+                <a href="">洗发水</a>
+                <a href="">摄像头</a>
+                <a href="">牛奶</a>
+                <a href="">四件套</a>
+                <a href="">口红</a>
+            </span>
+</div>
 <!-- 中部 -->
 
 <!-- 尾部 -->
@@ -94,8 +103,9 @@
 </div>
     <script src="js/layui.js"></script>
 <script>
-    layui.use('layer',function () {
+    layui.use(['layer','element'],function () {
         var layer = layui.layer;
+        var element = layui.element;
         // 鼠标悬浮按钮提示
         $('.tips').die().live('mouseenter', function () {
             var type = $(this).attr('id');
