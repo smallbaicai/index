@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>天猫首页</title>
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body style="height:2000px;" id="topAnchor">
+<!-- 左侧弹出导航 -->
+<!-- 右侧固定栏 -->
+<div class="rightFixedBar">
+    <div class="rightFixedBar-top">
+        <div id="members" class="tips"><img src="img/rightFixedBar-top.png" height="35" width="35"/></div>
+    </div>
+    <div class="rightFixedBar-center">
+        <div><i class="layui-icon shoppingCart" style="color: red">&#xe698;</i></div>
+        <span>购物车</span>
+    </div>
+    <div class="rightFixedBar-bottom">
+        <div id="money" class="tips"><img src="img/rightFixedBar-bottom-money.png" height="35" width="35"/></div>
+        <div id="collection" class="tips"><img src="img/rightFixedBar-bottom-collection.png" height="35" width="35"/></div>
+        <div id="see" class="tips"><img src="img/rightFixedBar-bottom-see.png" height="35" width="35"/></div>
+        <div id="topUp" class="tips"><img src="img/rightFixedBar-bottom-topUp.png" height="35" width="35"/></div>
+        <div class="feedback tips" id="feedback"><img src="img/rightFixedBar-bottom-feedback.png" height="35" width="35"/></div>
+        <div id="code" class="tips"><img src="img/b.png" height="35" width="35"/></div>
+        <a href="#topAnchor" id="returnTop" class="tips"><img src="img/rightFixedBar-bottom-returnTop.png" height="35" width="35"/></a>
+<!--        <div id="returnTop" class="tips"><img src="img/rightFixedBar-bottom-returnTop.png" height="35" width="35"/></div>-->
+    </div>
+</div>
+<!-- 顶部弹出搜索框 -->
+<!-- 头部 -->
+<div class="layui-header"></div>
+<!-- 中部 -->
+
+<!-- 尾部 -->
+<div class="layui-footer">
+    <div align="center">
+        <ul class="layui-lianjie">
+            <li><a href="https://pages.tmall.com/wow/seller/act/newpinzhibaozhang?spm=875.7931836/B.a2226n1.1.66144265CHGBbE"><img src="img/one.png" height="127" width="371"/></a></li>
+            <li><a href="https://www.tmall.com/wow/seller/act/seven-day?spm=875.7931836/B.a2226n1.2.66144265CHGBbE"><img src="img/two.png" height="122" width="371"/></a></li>
+            <li><a href="https://www.tmall.com/wow/seller/act/special-service"><img src="img/three.png" height="124" width="372"/></a></li>
+            <li><a href="https://service.tmall.com/support/tmall/tmallHelp.htm"><img src="img/four.png" height="125" width="383"/></a></li>
+        </ul>
+        <div class="layui-zhinan">
+            <dl>
+                <dt>购物指南</dt>
+                <dd><a href="https://register.tmall.com/">免费注册</a></dd>
+                <dd><a href="https://www.alipay.com/user/reg_select.htm">开通支付宝</a></dd>
+                <dd><a href="https://www.alipay.com/user/login.htm?goto=https%3A%2F%2Fwww.alipay.com%2Fuser%2Finpour_request.htm">支付宝支付</a></dd>
+            </dl>
+            <dl>
+                <dt>天猫保障</dt>
+                <dd><a href="">发票保障</a></dd>
+                <dd><a href="">售后规则</a></dd>
+                <dd><a href="">缺货赔货</a></dd>
+            </dl>
+            <dl>
+                <dt>支付方式</dt>
+                <dd><a href="">快捷支付</a></dd>
+                <dd><a href="">信用卡</a></dd>
+                <dd><a href="">余额宝</a></dd>
+                <dd><a href="">蚂蚁花呗</a></dd>
+                <dd><a href="">货到付款</a></dd>
+            </dl>
+            <dl>
+                <dt>商家服务</dt>
+                <dd><a href="">天猫规则</a></dd>
+                <dd><a href="">商家入驻</a></dd>
+                <dd><a href="">商家中心</a></dd>
+                <dd><a href="">天猫智库</a></dd>
+                <dd><a href="">物流服务</a></dd>
+                <dd><a href="">喵言喵语</a></dd>
+                <dd><a href="">运营服务</a></dd>
+            </dl>
+            <dl>
+                <dt>手机天猫</dt>
+                <dd><a href="https://mobile.tmall.com/?spm=875.7931836/B.a2226n1.23.66144265QyHYuL"><img src="img/code.png" height="105" width="105"/></a></dd>
+            </dl>
+        </div>
+<!--        <hr style="border:none;border-top:1px ridge rgba(128,128,128,0.11);width:1000px;margin: 100px auto;height: 1px" />-->
+    </div>
+<!--    <div class="zhinan">-->
+<!--        <ul>-->
+<!--            <li>购物指南</li>-->
+<!--            <li>天猫保障</li>-->
+<!--            <li>支付方式</li>-->
+<!--            <li>商家服务</li>-->
+<!--            <li>手机天猫</li>-->
+<!--        </ul>-->
+<!--    </div>-->
+</div>
+    <script src="js/layui.js"></script>
+<script>
+    layui.use('layer',function () {
+        var layer = layui.layer;
+        // 鼠标悬浮按钮提示
+        $('.tips').die().live('mouseenter', function () {
+            var type = $(this).attr('id');
+            console.log(type);
+            var info = "";
+            if (type === 'members') {
+                info = '会员权益';
+            } else if (type === 'money') {
+                info = '我的资产';
+            } else if (type === 'collection') {
+                info = '我的收藏';
+            } else if (type === 'see') {
+                info = '我看过的';
+            } else if (type === 'topUp') {
+                info = '我要充值';
+            } else if (type === 'feedback') {
+                info = '用户反馈';
+            } else if (type === 'code') {
+                info = '二维码';
+            } else if (type === 'returnTop') {
+                info = '返回顶部'
+            }
+            layer.tips(info, '#' + type, {
+                tips: [4, '#333'] //还可配置颜色
+            });
+
+        });
+    });
+
+</script>
+</body>
+</html>

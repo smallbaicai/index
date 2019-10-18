@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.rightFixedBar{
+    height: 100%;
+    width: 37px;
+    background-color: black;
+    position: fixed;
+    right: 0;
+}
+.rightFixedBar-top{
+    height: 233px;
+    border-bottom: 1px solid grey;
+    /*background-color: #ff3b35;*/
+}
+.rightFixedBar-top>div>img{
+    margin-top: 190px;
+}
+.rightFixedBar-center{
+    padding: 10px;
+    height: 80px;
+    /*background-color: red;*/
+    border-bottom: 1px solid grey;
+}
+.rightFixedBar-center>span{
+    color: white;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+}
+.rightFixedBar-bottom{
+    /*background-color: red;*/
+    height: 100%;
+}
+.rightFixedBar-bottom .feedback{
+    margin-top: 170px;
+}
+.rightFixedBar-center:hover,.rightFixedBar-top>div>img:hover{
+    background-color: red;
+}
+.rightFixedBar-bottom>div:hover{
+    background-color: red;
+}
+.layui-header{
+    height: 500px;
+}
+.layui-footer{
+    /*padding-top: 15px;*/
+    /*background-color: red;*/
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid rgba(128, 128, 128, 0.14);
+}
+.layui-footer>div{
+    /*padding: 30px;*/
+    padding-top: 15px;
+    /*padding-bottom: 20px;*/
+    padding-left: 30px;
+    padding-right: 30px;
+    /*width:400px;*/
+}
+ul>li{
+    list-style: none;
+    float: left;
+}
+
+/*.layui-footer>div>ul>li{*/
+/*    list-style: none;*/
+/*    float: left;*/
+/*}*/
+.layui-footer>div>ul>li>a>img{
+    width: 350px;
+}
+/*.layui-footer .zhinan{*/
+/*    width: 1300px;*/
+/*    margin: 0 auto;*/
+/*    background-color: red;*/
+/*    height: 300px;*/
+/*}*/
+.layui-footer .layui-zhinan{
+    margin-top: 20px;
+    float: left;
+    width: 100%;
+}
+.layui-footer .layui-zhinan>dl{
+    margin-left: 200px;
+    float: left;
+
+
+}
+.layui-footer .layui-zhinan>dl>dt{
+    font-weight: bold;
+    color: #646464;
+    margin-bottom: 10px;
+}
+.layui-footer .layui-zhinan>dl>dd>a{
+    color: rgba(100, 100, 100, 0.73);
+    font-size: 12px;
+    margin-top: 5px;
+}
+.layui-footer .layui-lianjie{
+    width: 100%;
+}
+

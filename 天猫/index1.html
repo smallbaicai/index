@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>天猫</title>
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="css/index1.css">
+</head>
+<body>
+<div class="father">
+    <!-- 头部导航条 -->
+    <div class="layui-top-nav">
+        <!-- 左边部分 -->
+        <div class="layui-nav-left">
+            <ul>
+                <li>喵，欢迎来天猫</li>
+                <li><a href="">请登录</a></li>
+                <li><a href="">免费注册</a></li>
+            </ul>
+        </div>
+        <!-- 右边部分 -->
+        <div class="layui-nav-right">
+            <ul class="layui-nav" lay-filter="">
+                <li class="layui-nav-item">
+                    <a href="">我的淘宝</a>
+                    <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                        <dd><a href="">已买到的宝贝</a></dd>
+                        <dd><a href="">已卖出的宝贝</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href=""><i class="layui-icon" style="color: red;margin-right: 3px">&#xe657;</i>购物车0件</a></li>
+                <li class="layui-nav-item"><a href="">大数据</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">收藏夹</a>
+                    <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                        <dd><a href="">收藏的店铺</a></dd>
+                        <dd><a href="">收藏的宝贝</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="layui-icon" style="color: red;margin-right: 3px;">&#xe63b;</i>手机版</a>
+                    <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                        <dd><img src="img/二维码.png" height="283" width="220"/></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">淘宝网</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">商家支持</a>
+                    <div class="layui-nav-child">
+                        <dl>
+                            <dt>商家</dt>
+                            <dd><a href="">商家中心</a></dd>
+                            <dd><a href="">商家入驻</a></dd>
+                            <dd><a href="">运营服务</a></dd>
+                            <dd><a href="">商家品控</a></dd>
+                            <dd><a href="">商家工具</a></dd>
+                            <dd><a href="">商家规则</a></dd>
+                            <dd><a href="">天猫智库</a></dd>
+                            <dd><a href="">喵言喵语</a></dd>
+                        </dl>
+                    </div>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">网站导航</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">列表</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 头部 -->
+    <div class="layui-header">
+        <!-- 图片logo -->
+        <div class="layui-logo" style="display:inline-block">
+            <img src="img/logo.png" height="130px" width="240px"/>
+        </div>
+        <div class="layui-form">
+            <!-- 搜索框 -->
+            <div class="date-search-box layui-input-inline">
+                <input type="text" name="key" lay-verify="" placeholder="搜索 天猫 商品/品牌/店铺" autocomplete="off"
+                       class="layui-input" id="key" style="border: 3px solid red;">
+            </div>
+            <!-- 搜索按钮 -->
+            <div class="date-search-box layui-input-inline" style="width: 120px;">
+                <button class="layui-btn search-btn" style="width: 120px;background-color: red">搜索</button>
+            </div>
+            <!-- 小导航 -->
+            <div class="layui-smallNav">
+                <span class="layui-breadcrumb" lay-separator="|">
+                <a href="">仿真花</a>
+                <a href="">洗发水</a>
+                <a href="">摄像头</a>
+                <a href="">牛奶</a>
+                <a href="">四件套</a>
+                <a href="">口红</a>
+            </span>
+            </div>
+        </div>
+    </div>
+    <div class="layui-main-container">
+        <div class="layui-main-top">
+            <div class="containor">
+                <div class="nav_left">
+                    <ul>
+                        <li data-id="1"><span>美妆/个人护理</span></li>
+                        <li data-id="2"><span>手机 /数码 /电脑办公</span></li>
+                        <li data-id="3"><span>零食 /茶酒 /进口食品 </span></li>
+                        <li data-id="4"><span>母婴玩具 </span></li>
+                        <li data-id="5"><span>腕表 /眼镜 /珠宝饰品 </span></li>
+                        <li data-id="6"><span>大家电 /生活电器 </span></li>
+                        <li data-id="7"><span>厨具 /收纳 /宠物  </span></li>
+                        <li data-id="8"><span>汽车 /配件 /用品  </span></li>
+                        <li data-id="9"><span>生鲜水果  </span></li>
+                        <li data-id="10"><span>家纺 /家饰 /鲜花   </span></li>
+                    </ul>
+                </div>
+                <div class="nav_right">
+                    <div class="sub hide" data-id="1">
+                        <dl>
+                            <dt><a>护肤品 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                            </dd>
+
+                        </dl>
+                        <dl>
+                            <dt><a>男士护肤 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>洁面爽</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>肤水乳液/面霜</a>
+                                <a>精华液</a>
+                                <a>眼部护理</a>
+                                <a>面膜</a>
+                                <a>唇部护理</a>
+                                <a>防晒</a>
+                                <a>精华液</a>
+                                <a>T区护理控油</a>
+
+                            </dd>
+
+                        </dl>
+                        <dl>
+                            <dt><a>护肤品 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                            </dd>
+
+                        </dl>
+                        <dl>
+                            <dt><a>彩妆 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>时尚彩妆</a>
+                                <a>香水</a>
+                                <a>气垫护肤</a>
+                                <a>BB霜</a>
+                                <a>口红</a>
+                                <a>隔离</a>
+                                <a>粉底</a>
+                                <a>粉饼</a>
+                            </dd>
+
+                        </dl>
+                        <dl>
+                            <dt><a>男士护肤 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>洁面爽</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>肤水乳液/面霜</a>
+                                <a>精华液</a>
+                                <a>眼部护理</a>
+                                <a>面膜</a>
+                                <a>唇部护理</a>
+                                <a>防晒</a>
+                                <a>精华液</a>
+                                <a>T区护理控油</a>
+
+                            </dd>
+
+                        </dl>
+                        <dl>
+                            <dt><a>男士护肤 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>洁面爽</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>肤水乳液/面霜</a>
+                                <a>精华液</a>
+                                <a>眼部护理</a>
+                                <a>面膜</a>
+                                <a>唇部护理</a>
+                                <a>防晒</a>
+                                <a>精华液</a>
+                                <a>T区护理控油</a>
+
+                            </dd>
+
+                        </dl>
+                    </div>
+                    <div class="sub hide" data-id="2">
+                        <dl>
+                            <dt><a>电脑办公 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="sub hide" data-id="3">
+                        <dl>
+                            <dt><a>进口食品 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>官方直售</a>
+                                <a>饼干</a>
+                                <a>海苔</a>
+                                <a>火腿肠</a>
+                                <a>方便面</a>
+                                <a>果冻</a>
+                                <a>水果干</a>
+                                <a>坚果</a>
+                                <a>面包蛋糕</a>
+                                <a>华夫饼</a>
+                                <a>进口巧克力</a>
+                                <a>进口咖啡</a>
+                                <a>进口葡萄酒</a>
+                                <a>啤酒饮料</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="sub hide" data-id="4">
+                        <dl>
+                            <dt><a>母婴玩具 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>童装</a>
+                                <a>秋换新</a>
+                                <a>商场同款</a>
+                                <a>特价优惠</a>
+                                <a>秋衣秋裤</a>
+                                <a>外套</a>
+                                <a>羽绒服</a>
+                                <a>夹克</a>
+                                <a>连衣裙</a>
+                                <a>裤子</a>
+
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="sub hide" data-id="5">
+                        <dl>
+                            <dt><a>珠宝饰品 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="sub hide" data-id="6">
+                        <dl>
+                            <dt><a>生活电器 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>官方直售</a>
+                                <a>生活电器</a>
+                                <a>生活电器</a>
+                                <a>吹风机</a>
+                                <a>精华液</a>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                                <a>官方直售</a>
+                                <a>面膜</a>
+                                <a>护肤套装</a>
+                                <a>乳液面霜</a>
+                                <a>精华液</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="sub hide" data-id="7">
+                        <dl>
+                            <dt><a>厨具 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>厨具</a>
+                                <a>厨具</a>
+                                <a>油烟机</a>
+                                <a>洗碗机</a>
+                                <a>电磁炉</a>
+                                <a>微波炉</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="sub hide" data-id="8">
+                        <dl>
+                            <dt><a>汽车 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>汽车</a>
+                                <a>汽车</a>
+                                <a>汽车</a>
+                                <a>汽车</a>
+                                <a>汽车</a>
+                                <a>汽车</a>
+                                <a>汽车</a>
+                                <a>汽车</a>
+                                <a>汽车</a>
+                                <a>汽车</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="sub hide" data-id="9">
+                        <dl>
+                            <dt><a>生鲜水果 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>火龙果</a>
+                                <a>苹果</a>
+                                <a>榴莲</a>
+                                <a>进口水果</a>
+                                <a>优惠活动</a>
+                                <a>雪梨</a>
+                                <a>山竹</a>
+                                <a>葡萄</a>
+                                <a>泰国芒果</a>
+                                <a>柚子</a>
+                                <a>马蹄</a>
+                                <a>橘子</a>
+                                <a>香蕉</a>
+                                <a>猕猴桃</a>
+                                <a>椰子</a>
+                            </dd>
+                        </dl>
+
+                    </div>
+                    <div class="sub hide" data-id="10">
+                        <dl>
+                            <dt><a>当季热卖 <i> &gt;</i></a></dt>
+                            <dd>
+                                <a>定制窗帘</a>
+                                <a>抱枕</a>
+                                <a>被子</a>
+                                <a>两用坐垫</a>
+                                <a>国际家纺床品</a>
+                                <a>国际居家布艺</a>
+                                <a>国际家居饰品</a>
+                            </dd>
+                        </dl>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 菜单 -->
+<!--            <div class="layui-menu">-->
+<!--                <div class="layui-menu-nav-left">-->
+<!--                    <ul>-->
+<!--                        <li><a href="#">女装/内衣</a></li>-->
+<!--                        <li><a href="#">男装/运动户外</a></li>-->
+<!--                        <li><a href="#">女鞋/运动户外</a></li>-->
+<!--                        <li><a href="#">美妆/个人护理</a></li>-->
+<!--                        <li><a href="#">腕表/眼镜/珠宝饰品</a></li>-->
+<!--                        <li><a href="#">手机/数码/珠宝饰品</a></li>-->
+<!--                        <li><a href="#">母婴玩具</a></li>-->
+<!--                        <li><a href="#">零食/茶酒/进口食品</a></li>-->
+<!--                        <li><a href="#">生鲜水果</a></li>-->
+<!--                        <li><a href="#">大家电/生活电器</a></li>-->
+<!--                        <li><a href="#">家具建材</a></li>-->
+<!--                        <li><a href="#">汽车/配件/用品</a></li>-->
+<!--                        <li><a href="#">家纺/家饰/鲜花</a></li>-->
+<!--                        <li><a href="#">医药保健</a></li>-->
+<!--                        <li><a href="#">厨具/收纳/宠物</a></li>-->
+<!--                        <li><a href="#">图书音像</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="layui-menu-nav-right">-->
+<!--                    <div class="layui-sub " id="1" style="">-->
+<!--                        <dl>-->
+<!--                            <dt><span>当季流行</span><i>&gt;</i></dt>-->
+<!--                            <dd><a href="">女装新品</a></dd>-->
+<!--                            <dd><a href="">商场同款</a></dd>-->
+<!--                            <dd><a href="">仙女连衣裙</a></dd>-->
+<!--                            <dd><a href="">T恤</a></dd>-->
+<!--                            <dd><a href="">衬衫</a></dd>-->
+<!--                            <dd><a href="">牛仔裤</a></dd>-->
+<!--                            <dd><a href="">休闲裤</a></dd>-->
+<!--                            <dd><a href="">外套</a></dd>-->
+<!--                            <dd><a href="">靴子</a></dd>-->
+<!--                            <dd><a href="">潮流家居服</a></dd>-->
+<!--                            <dd><a href="">运动文胸</a></dd>-->
+<!--                            <dd><a href="">百搭船袜</a></dd>-->
+<!--                        </dl>-->
+<!--                        <dl>-->
+<!--                            <dt><span>精选上装</span><i>&gt;</i></dt>-->
+<!--                            <dd><a href="">女装新品</a></dd>-->
+<!--                            <dd><a href="">商场同款</a></dd>-->
+<!--                            <dd><a href="">仙女连衣裙</a></dd>-->
+<!--                            <dd><a href="">T恤</a></dd>-->
+<!--                            <dd><a href="">衬衫</a></dd>-->
+<!--                            <dd><a href="">牛仔裤</a></dd>-->
+<!--                            <dd><a href="">休闲裤</a></dd>-->
+<!--                            <dd><a href="">外套</a></dd>-->
+<!--                            <dd><a href="">靴子</a></dd>-->
+<!--                            <dd><a href="">潮流家居服</a></dd>-->
+<!--                            <dd><a href="">运动文胸</a></dd>-->
+<!--                            <dd><a href="">百搭船袜</a></dd>-->
+<!--                        </dl>-->
+<!--                        <dl>-->
+<!--                            <dt><span>浪漫裙装</span><i>&gt;</i></dt>-->
+<!--                            <dd><a href="">女装新品</a></dd>-->
+<!--                            <dd><a href="">商场同款</a></dd>-->
+<!--                            <dd><a href="">仙女连衣裙</a></dd>-->
+<!--                            <dd><a href="">T恤</a></dd>-->
+<!--                            <dd><a href="">衬衫</a></dd>-->
+<!--                            <dd><a href="">牛仔裤</a></dd>-->
+<!--                            <dd><a href="">休闲裤</a></dd>-->
+<!--                            <dd><a href="">外套</a></dd>-->
+<!--                            <dd><a href="">靴子</a></dd>-->
+<!--                            <dd><a href="">潮流家居服</a></dd>-->
+<!--                            <dd><a href="">运动文胸</a></dd>-->
+<!--                            <dd><a href="">百搭船袜</a></dd>-->
+<!--                        </dl>-->
+<!--                        <dl>-->
+<!--                            <dt><span>女士下装</span><i>&gt;</i></dt>-->
+<!--                            <dd><a href="">女装新品</a></dd>-->
+<!--                            <dd><a href="">商场同款</a></dd>-->
+<!--                            <dd><a href="">仙女连衣裙</a></dd>-->
+<!--                            <dd><a href="">T恤</a></dd>-->
+<!--                            <dd><a href="">衬衫</a></dd>-->
+<!--                            <dd><a href="">牛仔裤</a></dd>-->
+<!--                            <dd><a href="">休闲裤</a></dd>-->
+<!--                            <dd><a href="">外套</a></dd>-->
+<!--                            <dd><a href="">靴子</a></dd>-->
+<!--                            <dd><a href="">潮流家居服</a></dd>-->
+<!--                            <dd><a href="">运动文胸</a></dd>-->
+<!--                            <dd><a href="">百搭船袜</a></dd>-->
+<!--                        </dl>-->
+<!--                        <dl>-->
+<!--                            <dt><span>特色女装</span><i>&gt;</i></dt>-->
+<!--                            <dd><a href="">女装新品</a></dd>-->
+<!--                            <dd><a href="">商场同款</a></dd>-->
+<!--                            <dd><a href="">仙女连衣裙</a></dd>-->
+<!--                            <dd><a href="">T恤</a></dd>-->
+<!--                            <dd><a href="">衬衫</a></dd>-->
+<!--                            <dd><a href="">牛仔裤</a></dd>-->
+<!--                            <dd><a href="">休闲裤</a></dd>-->
+<!--                            <dd><a href="">外套</a></dd>-->
+<!--                            <dd><a href="">靴子</a></dd>-->
+<!--                            <dd><a href="">潮流家居服</a></dd>-->
+<!--                            <dd><a href="">运动文胸</a></dd>-->
+<!--                            <dd><a href="">百搭船袜</a></dd>-->
+<!--                        </dl>-->
+<!--                        <dl>-->
+<!--                            <dt><span>文胸塑身</span><i>&gt;</i></dt>-->
+<!--                            <dd><a href="">女装新品</a></dd>-->
+<!--                            <dd><a href="">商场同款</a></dd>-->
+<!--                            <dd><a href="">仙女连衣裙</a></dd>-->
+<!--                            <dd><a href="">T恤</a></dd>-->
+<!--                            <dd><a href="">衬衫</a></dd>-->
+<!--                            <dd><a href="">牛仔裤</a></dd>-->
+<!--                            <dd><a href="">休闲裤</a></dd>-->
+<!--                            <dd><a href="">外套</a></dd>-->
+<!--                            <dd><a href="">靴子</a></dd>-->
+<!--                            <dd><a href="">潮流家居服</a></dd>-->
+<!--                            <dd><a href="">运动文胸</a></dd>-->
+<!--                            <dd><a href="">百搭船袜</a></dd>-->
+<!--                        </dl>-->
+<!--                        <dl>-->
+<!--                            <dt><span>家居服</span><i>&gt;</i></dt>-->
+<!--                            <dd><a href="">女装新品</a></dd>-->
+<!--                            <dd><a href="">商场同款</a></dd>-->
+<!--                            <dd><a href="">仙女连衣裙</a></dd>-->
+<!--                            <dd><a href="">T恤</a></dd>-->
+<!--                            <dd><a href="">衬衫</a></dd>-->
+<!--                            <dd><a href="">牛仔裤</a></dd>-->
+<!--                            <dd><a href="">休闲裤</a></dd>-->
+<!--                            <dd><a href="">外套</a></dd>-->
+<!--                            <dd><a href="">靴子</a></dd>-->
+<!--                            <dd><a href="">潮流家居服</a></dd>-->
+<!--                            <dd><a href="">运动文胸</a></dd>-->
+<!--                            <dd><a href="">百搭船袜</a></dd>-->
+<!--                        </dl>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+
+</div>
+<script src="../js/jquery.min.js"></script>
+<script src="js/layui.js"></script>
+<script>
+    layui.use(['element','form'],function () {
+        var element = layui.element;
+        var form = layui.form;
+    })
+</script>
+</body>
+</html>
