@@ -1,4 +1,6 @@
 $(function() {
+
+    // 菜单
     $('.containor-menu').on('mouseenter', function() {
         $(".nav_right").removeClass('hide');
     }).on('mouseleave', function() {
@@ -10,4 +12,4 @@ $(function() {
         $('.sub[data-id="' + li_data + '"]').removeClass('hide');
     })
 
-})
+});

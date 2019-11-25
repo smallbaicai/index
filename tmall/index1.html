@@ -6,9 +6,30 @@
     <title>天猫</title>
     <link rel="stylesheet" href="css/layui.css">
     <link rel="stylesheet" href="css/index1.css">
+    <script src="layui/layui.js"></script>
 </head>
 <body style='overflow:scroll;overflow-x:hidden'>
 <div class="father">
+    <!-- 右侧固定栏 -->
+    <div class="rightFixedBar">
+        <div class="rightFixedBar-top">
+            <div id="members" class="tips"><img src="img/rightFixedBar-top.png" height="35" width="35"/></div>
+        </div>
+        <div class="rightFixedBar-center">
+            <div><i class="layui-icon shoppingCart" style="color: red">&#xe698;</i></div>
+            <span>购物车</span>
+        </div>
+        <div class="rightFixedBar-bottom">
+            <div id="money" class="tips"><img src="img/rightFixedBar-bottom-money.png" height="35" width="35"/></div>
+            <div id="collection" class="tips"><img src="img/rightFixedBar-bottom-collection.png" height="35" width="35"/></div>
+            <div id="see" class="tips"><img src="img/rightFixedBar-bottom-see.png" height="35" width="35"/></div>
+            <div id="topUp" class="tips"><img src="img/rightFixedBar-bottom-topUp.png" height="35" width="35"/></div>
+            <div class="feedback tips" id="feedback"><img src="img/rightFixedBar-bottom-feedback.png" height="35" width="35"/></div>
+            <div id="code" class="tips"><img src="img/b.png" height="35" width="35"/></div>
+            <a href="#topAnchor" id="returnTop" class="tips"><img src="img/rightFixedBar-bottom-returnTop.png" height="35" width="35"/></a>
+            <!--        <div id="returnTop" class="tips"><img src="img/rightFixedBar-bottom-returnTop.png" height="35" width="35"/></div>-->
+        </div>
+    </div>
     <!-- 头部导航条 -->
     <div class="layui-top-nav">
         <!-- 左边部分 -->
@@ -103,25 +124,49 @@
         </div>
     </div>
     <!-- 内容主体区域 -->
-    <div class="layui-main-containor">
-        <!-- 导航部分 -->
-        <div class="containor-nav">
-            <ul>
-                <li class="first-li">商品分类</li>
-                <li class="li-width"><a href="#"><img src="img/tianmao.png"  width="100"/></a></li>
-                <li class="li-width"><a href="#"><img src="img/internel.png"  width="100"/></a></li>
-                <li><a href="#">天猫会员</a></li>
-                <li><a href="#">电器城</a></li>
-                <li><a href="#">喵鲜城</a></li>
-                <li><a href="#">医药馆</a></li>
-                <li><a href="#">营业厅</a></li>
-                <li><a href="#">魅力惠</a></li>
-                <li><a href="#">飞猪旅行</a></li>
-                <li><a href="#">苏宁易购</a></li>
+    <div class="layui-main">
+        <div class="layui-main-containor" id="AD-Rotation">
+            <!-- 广告轮播图 -->
+            <div id="prev"></div>
+            <div id="next"></div>
+            <ul id="play">
+                <li style="display: block;"><img src="img/1.jpg" alt="" /></li>
+                <li><img src="img/2.jpg" alt="" /></li>
+                <li><img src="img/3.jpg" alt="" /></li>
+                <li><img src="img/4.jpg" alt="" /></li>
+                <li><img src="img/5.jpg" alt="" /></li>
+                <li><img src="img/6.jpg" alt="" /></li>
+                <li><img src="img/7.jpg" alt="" /></li>
+                <li><img src="img/8.jpg" alt="" /></li>
+            </ul>
+            <ul id="button">
+                <li><div style="background: #A10000;"></div></li>
+                <li><div></div></li>
+                <li><div></div></li>
+                <li><div></div></li>
+                <li><div></div></li>
+                <li><div></div></li>
+                <li><div></div></li>
+                <li><div></div></li>
+            </ul>
+            <!-- 导航部分 -->
+            <div class="containor-nav">
+                <ul>
+                    <li class="first-li">商品分类</li>
+                    <li class="li-width"><a href="#"><img src="img/tianmao.png"  width="100"/></a></li>
+                    <li class="li-width"><a href="#"><img src="img/internel.png"  width="100"/></a></li>
+                    <li><a href="#">天猫会员</a></li>
+                    <li><a href="#">电器城</a></li>
+                    <li><a href="#">喵鲜城</a></li>
+                    <li><a href="#">医药馆</a></li>
+                    <li><a href="#">营业厅</a></li>
+                    <li><a href="#">魅力惠</a></li>
+                    <li><a href="#">飞猪旅行</a></li>
+                    <li><a href="#">苏宁易购</a></li>
             </ul>
         </div>
-        <!-- 菜单部分 -->
-        <div class="containor-menu">
+            <!-- 菜单部分 -->
+            <div class="containor-menu">
             <div class="nav_left">
                 <ul>
                     <li data-id="1"><span>美妆/个人护理</span></li>
@@ -424,17 +469,240 @@
                 </div>
             </div>
         </div>
+        </div>
+        <!-- 广告图片 -->
+        <!-- 结束图片 -->
+        <div class="end-AD">
+            <img src="img/onload.png" height="35" width="62"/>
+        </div>
     </div>
+    <!-- 尾部 -->
+    <div class="layui-footer" style="height:346px;border-bottom: 2px solid red;">
+        <div align="center">
+            <ul class="layui-lianjie">
+                <li><a href="https://pages.tmall.com/wow/seller/act/newpinzhibaozhang?spm=875.7931836/B.a2226n1.1.66144265CHGBbE"><img src="img/one.png" height="127" width="371"/></a></li>
+                <li><a href="https://www.tmall.com/wow/seller/act/seven-day?spm=875.7931836/B.a2226n1.2.66144265CHGBbE"><img src="img/two.png" height="122" width="371"/></a></li>
+                <li><a href="https://www.tmall.com/wow/seller/act/special-service"><img src="img/three.png" height="124" width="372"/></a></li>
+                <li><a href="https://service.tmall.com/support/tmall/tmallHelp.htm"><img src="img/four.png" height="125" width="383"/></a></li>
+            </ul>
+            <div class="layui-zhinan">
+                <dl>
+                    <dt>购物指南</dt>
+                    <dd><a href="https://register.tmall.com/">免费注册</a></dd>
+                    <dd><a href="https://www.alipay.com/user/reg_select.htm">开通支付宝</a></dd>
+                    <dd><a href="https://www.alipay.com/user/login.htm?goto=https%3A%2F%2Fwww.alipay.com%2Fuser%2Finpour_request.htm">支付宝支付</a></dd>
+                </dl>
+                <dl>
+                    <dt>天猫保障</dt>
+                    <dd><a href="">发票保障</a></dd>
+                    <dd><a href="">售后规则</a></dd>
+                    <dd><a href="">缺货赔货</a></dd>
+                </dl>
+                <dl>
+                    <dt>支付方式</dt>
+                    <dd><a href="">快捷支付</a></dd>
+                    <dd><a href="">信用卡</a></dd>
+                    <dd><a href="">余额宝</a></dd>
+                    <dd><a href="">蚂蚁花呗</a></dd>
+                    <dd><a href="">货到付款</a></dd>
+                </dl>
+                <dl>
+                    <dt>商家服务</dt>
+                    <dd><a href="">天猫规则</a></dd>
+                    <dd><a href="">商家入驻</a></dd>
+                    <dd><a href="">商家中心</a></dd>
+                    <dd><a href="">天猫智库</a></dd>
+                    <dd><a href="">物流服务</a></dd>
+                    <dd><a href="">喵言喵语</a></dd>
+                    <dd><a href="">运营服务</a></dd>
+                </dl>
+                <dl>
+                    <dt>手机天猫</dt>
+                    <dd><a href="https://mobile.tmall.com/?spm=875.7931836/B.a2226n1.23.66144265QyHYuL"><img src="img/code.png" height="105" width="105"/></a></dd>
+                </dl>
+            </div>
+            <div class="tmall">
+                <img src="img/tmall.png" height="30" width="68"/></div>
+            </div>
+        </div>
+        <!-- 出版权 -->
+        <div class="footer-copyright">
+            <div class="footer-nav">
+                <ul class="nav1">
+                    <li><a href="#">关于天猫</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">开放平台</a></li>
+                    <li><a href="#">诚聘英才</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">网站合作</a></li>
+                    <li><a href="#">法律声明</a></li>
+                    <li><a href="#">隐私权政策</a></li>
+                    <li><a href="#">知识产权</a></li>
+                    <li><a href="#">廉政举报</a></li>
+                    <li><a href="#">规则意见征集</a></li>
+                </ul>
+                <span class="layui-breadcrumb nav" lay-separator="|">
+                    <a href="">阿里巴巴集团</a>
+                    <a href="">淘宝网</a>
+                    <a href="">天猫</a>
+                    <a href="">聚划算</a>
+                    <a href="">全球速卖通</a>
+                    <a href="">阿里巴巴国际交易市场</a>
+                    <a href="">1688</a>
+                    <a href="">阿里妈妈</a>
+                    <a href="">飞猪</a>
+                    <a href="">阿里云计算</a>
+                    <a href="">AliOS</a>
+                    <a href="">阿里通信</a>
+                    <a href="">万网</a>
+                    <a href="">高德</a>
+                    <a href="">UC</a>
+                    <a href="">友盟</a>
+                    <a href="">虾米</a>
+                    <a href="">钉钉</a>
+                    <a href="">支付宝</a>
+                </span>
+                <ul class="nav2">
+                    <li>增值电信业务经营许可证： 浙B2-20110446</li>
+                    <li>市场名称登记证：工商网市字3301004119号</li>
+                    <li>出版物网络交易平台服务经营备案证： 新出发浙备字第001号</li>
+                    <li>互联网违法和不良信息举报电话：0571-81683755 blxxjb@alibaba-inc.com</li>
+                    <li>互联网药品信息服务资质证书编号：浙-（经营性）-2017-0005</li>
+                    <li>
+                        <img src="img/gongan.png" height="20" width="20" style="float: left"/>
+                        <a href="#" style="color: #9E9E9E">浙公网安备 33010002000120号</a>
+                    </li>
+                </ul>
+                <ul class="nav3">
+                    <li>医疗器械网络交易服务第三方平台备案：（浙）网械平台备字[2018]第00002号</li>
+                    <li>互联网药品交易服务资格证书：国A20150001</li>
+                    <li>浙江省网络食品销售第三方平台提供者备案：浙网食A33010002</li>
+                    <li>12318举报</li>
 
-
+                </ul>
+                <ul class="nav4">
+                    <li class="copyright">© 2003-2019 TMALL.COM 版权所有</li>
+                </ul>
+                <ul class="nav5">
+                    <li><img src="img/gongan1.gif" height="30"/></li>
+                    <li><img src="img/xukezheng.jpg" height="30" width="80"/></li>
+                </ul>
+            </div>
+    </div>
 </div>
 <script src="../js/jquery.min.js"></script>
 <script src="js/index1.js"></script>
-<script src="layui/layui.js"></script>
+<!--<script src="layui/layui.js"></script>-->
+
 <script>
-    layui.use(['element','form'],function () {
+    window.onload=function()
+    {
+        var oPlay=document.getElementById('play'); // 图片ul
+        var aLi=oPlay.getElementsByTagName('li');  // 图片li
+        var oButton=document.getElementById('button'); // 按钮ul
+        var aDiv=oButton.getElementsByTagName('div');  // 按钮div
+        var oPrev=document.getElementById('prev');
+        var oNext=document.getElementById('next');
+        var oFlash=document.getElementById('AD-Rotation'); // 整个div
+        var now=0;
+        var timer2=null;
+        // 底部圆点按钮
+        for(var i=0; i<aDiv.length; i++) {
+            aDiv[i].index=i;
+            // 鼠标移入当前圆点按钮
+            aDiv[i].onmouseover=function(){
+                if(now==this.index) return;
+                now=this.index;
+                tab();
+            }
+        }
+        // 上一张按钮点击事件
+        oPrev.onclick=function(){
+            now--;
+            if(now==-1){
+                now=aDiv.length-1;
+            }
+            tab();
+        };
+        // 下一张按钮点击事件
+        oNext.onclick=function(){
+            now++;
+            if(now==aDiv.length){
+                now=0;
+            }
+            tab();
+        };
+        // 整个div鼠标移入事件
+        oFlash.onmouseover=function()
+        {
+            clearInterval(timer2);
+        };
+        // 整个div鼠标移出事件
+        oFlash.onmouseout=function()
+        {
+            timer2=setInterval(oNext.onclick,4000); // 下一张点击事件
+        };
+        timer2=setInterval(oNext.onclick,5000);
+        function tab(){
+            // 图片
+            for(var i=0; i<aLi.length; i++){
+                aLi[i].style.display='none';  // 图片不被显示
+            }
+            // 圆点按钮
+            for(var i=0; i<aDiv.length; i++) {
+                aDiv[i].style.background="#DDDDDD";
+            }
+            aDiv[now].style.background='#A10000';
+            aLi[now].style.display='block';
+            aLi[now].style.opacity=0;
+            aLi[now].style.filter="alpha(opacity=0)"; // IE浏览器的滤镜效果
+            jianbian(aLi[now]);
+        }
+        // 渐变函数
+        function jianbian(obj){
+            var alpha=0;
+            clearInterval(timer);
+            var timer=setInterval(function(){
+                alpha++;
+                obj.style.opacity=alpha/100;
+                obj.style.filter="alpha(opacity="+alpha+")";
+                if(alpha==100) {
+                    clearInterval(timer);
+                }
+            },10);
+        }
+    };
+    layui.use(['element','form','layer'],function () {
         var element = layui.element;
         var form = layui.form;
+        var layer = layui.layer;
+        // 鼠标悬浮按钮提示
+        $('.tips').die().live('mouseenter', function () {
+            var type = $(this).attr('id');
+            console.log(type);
+            var info = "";
+            if (type === 'members') {
+                info = '会员权益';
+            } else if (type === 'money') {
+                info = '我的资产';
+            } else if (type === 'collection') {
+                info = '我的收藏';
+            } else if (type === 'see') {
+                info = '我看过的';
+            } else if (type === 'topUp') {
+                info = '我要充值';
+            } else if (type === 'feedback') {
+                info = '用户反馈';
+            } else if (type === 'code') {
+                info = '二维码';
+            } else if (type === 'returnTop') {
+                info = '返回顶部'
+            }
+            layer.tips(info, '#' + type, {
+                tips: [4, '#333'] //还可配置颜色
+            });
+
+        });
     })
 </script>
 </body>
